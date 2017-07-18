@@ -4,7 +4,8 @@ export default function() {
 
   this.changeState = function($event) {
     this.visible = !this.visible;
-    $event.stopPropagation();
+    if ($event) {
+      $event.stopPropagation();
+    }
   };
-
 }

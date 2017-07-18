@@ -7,5 +7,4 @@ export default function() {
       <div layout="row" layout-fill layout-align="start center" ng-transclude></div>
     </md-button>
   `;
-
 }

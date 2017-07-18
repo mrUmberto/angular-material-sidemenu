@@ -1,6 +1,6 @@
 export default function() {
   return `
-    <div class="md-sidemenu-content" layout="column">
+    <div class="md-sidemenu-content" layout="column" ng-class="{'md-active': $mdSidemenuContent.visible}">
       <md-button class="md-sidemenu-toggle" ng-if="$mdSidemenuContent.heading" ng-click="$mdSidemenuContent.changeState();" ng-class="{ 'md-active': $mdSidemenuContent.visible }">
         <div layout="row">
           <md-icon ng-if="$mdSidemenuContent.svgIcon" md-svg-icon="{{ $mdSidemenuContent.svgIcon }}"></md-icon>

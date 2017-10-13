@@ -9,7 +9,7 @@ export default function() {
           <md-icon ng-if="$mdSidemenuContent.arrow" ng-click="$mdSidemenuContent.changeState($event);">keyboard_arrow_down</md-icon>
         </div>
       </md-button>
-      <div class="md-sidemenu-wrapper" ng-show="$mdSidemenuContent.visible" md-sidemenu-disable-animate ng-class="{ 'md-active': $mdSidemenuContent.visible, 'md-sidemenu-wrapper-icons':  $mdSidemenuContent.icon }" layout="column" ng-transclude></div>
+      <div class="md-sidemenu-wrapper" ng-if="$mdSidemenuContent.visible" md-sidemenu-disable-animate ng-class="{ 'md-active': $mdSidemenuContent.visible, 'md-sidemenu-wrapper-icons':  $mdSidemenuContent.icon }" layout="column" ng-transclude></div>
     </div>
   `;
 

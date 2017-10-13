@@ -77,14 +77,16 @@ md-sidemenu-button {
 }
 
 .md-sidemenu-wrapper {
-  margin-top: -200vh;
-  overflow: hidden;
-  opacity: 0;
-  transform: translate3D(0, 0, 0);
-  transition: .4s cubic-bezier(.55, 0, .55, .2);
-  transition-property: transform, opacity, margin, background;
+  &.ng-enter, &.ng-leave {
+    margin-top: -200vh;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate3D(0, 0, 0);
+    transition: 300ms cubic-bezier(.55, 0, .55, .2);
+    transition-property: transform, opacity, margin, background;
+  }
 
-  &.md-active {
+  &.ng-enter.md-sidemenu-wrapper.ng-enter-active {
     margin-top: 0;
     opacity: 1;
     transition-timing-function: cubic-bezier(.25, .8, .25, 1);

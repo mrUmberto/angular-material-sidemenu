@@ -1,7 +1,7 @@
 export default function () {
   return `
     <div class="md-sidemenu-content" layout="column" ng-class="{'md-active': $mdSidemenuContent.visible}">
-      <div flex class="md-button md-sidemenu-toggle" ng-click="$mdSidemenuContent.runClick();" ng-if="$mdSidemenuContent.heading" ng-class="{ 'md-active': $mdSidemenuContent.visible }">
+      <div flex class="md-button md-sidemenu-toggle" ng-click="$mdSidemenuContent.runClick($event);" ng-if="$mdSidemenuContent.heading" ng-class="{ 'md-active': $mdSidemenuContent.visible }">
         <div layout="row">
           <md-icon ng-if="$mdSidemenuContent.svgIcon" md-svg-icon="{{ $mdSidemenuContent.svgIcon }}"></md-icon>
           <md-icon ng-if="$mdSidemenuContent.icon">{{ $mdSidemenuContent.icon }}</md-icon>

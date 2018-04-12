@@ -4,12 +4,14 @@ var controller = function($mdSidenav) {
     $mdSidenav('navigation-drawer').toggle();
   };
 
-  this.fc = function() {
+  this.fc = function(data) {
+    console.log(data);
     console.log('promise function is called');
     return Promise.resolve();
   };
 
-  this.clickFunc = function() {
+  this.clickFunc = function(data) {
+    console.log(data);
     console.log('click function is called');
   }
 };

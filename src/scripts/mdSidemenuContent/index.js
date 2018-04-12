@@ -10,8 +10,8 @@ let directive = () => {
       icon: '@?mdIcon',
       svgIcon: '@?mdSvgIcon',
       arrow: '@?mdArrow',
-      dyFunc: '=',
-      clickFunc: '='
+      dyFunc: '&',
+      clickFunc: '&'
     },
     replace: true,
     transclude: true,

@@ -7,13 +7,9 @@ export default function () {
       $event.stopPropagation();
     }
     if (this.dyFunc) {
-      this.dyFunc().then(() => {
-        this.visible = !this.visible;
-      })
+      this.dyFunc();
     }
-    else {
-      this.visible = !this.visible;
-    }
+    this.visible = !this.visible;
   };
 
   this.runClick = function ($event) {

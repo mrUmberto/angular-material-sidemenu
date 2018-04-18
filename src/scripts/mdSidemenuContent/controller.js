@@ -1,4 +1,4 @@
-export default function ($scope) {
+export default function ($timeout) {
 
   this.visible = false;
 
@@ -10,8 +10,8 @@ export default function ($scope) {
     if (this.dyFunc) {
       this.dyFunc().then(() => {
       }).finally(() => {
-        $scope.$apply(() => {
-          this.loading = false;
+        $timeout(() => {
+           this.loading = false;
         })
       })
     }

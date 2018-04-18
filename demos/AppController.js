@@ -1,16 +1,21 @@
-var controller = function($mdSidenav) {
+var controller = function ($mdSidenav) {
 
-  this.toggleNavigation = function() {
+  this.toggleNavigation = function () {
     $mdSidenav('navigation-drawer').toggle();
   };
 
-  this.fc = function(data) {
+  this.fc = function (data) {
     console.log(data);
     console.log('promise function is called');
-    return Promise.resolve();
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        // переведёт промис в состояние fulfilled с результатом "result"
+        resolve("result");
+      }, 1000);
+    });
   };
 
-  this.clickFunc = function(data) {
+  this.clickFunc = function (data) {
     console.log(data);
     console.log('click function is called');
   }

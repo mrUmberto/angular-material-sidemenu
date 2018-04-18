@@ -1,13 +1,19 @@
-export default function () {
+export default function ($scope) {
 
   this.visible = false;
 
   this.changeState = function ($event) {
+    this.loading = true;
     if ($event) {
       $event.stopPropagation();
     }
     if (this.dyFunc) {
-      this.dyFunc();
+      this.dyFunc().then(() => {
+      }).finally(() => {
+        $scope.$apply(() => {
+          this.loading = false;
+        })
+      })
     }
     this.visible = !this.visible;
   };

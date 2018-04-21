@@ -8,7 +8,7 @@ export default function () {
           <span flex>{{ $mdSidemenuContent.heading }}</span>
            <md-icon ng-click="$mdSidemenuContent.changeState($event);" ng-if="$mdSidemenuContent.arrow">keyboard_arrow_down</md-icon>
         </div>
-        <md-progress-linear ng-if="$mdSidemenuContent.loading"></md-progress-linear>
+        <md-progress-linear class="loading-progress" ng-if="$mdSidemenuContent.loading"></md-progress-linear>
       </div>
       <div class="md-sidemenu-wrapper" ng-if="$mdSidemenuContent.visible" md-sidemenu-disable-animate ng-class="{ 'md-active': $mdSidemenuContent.visible, 'md-sidemenu-wrapper-icons':  $mdSidemenuContent.icon }" layout="column" ng-transclude></div>
     </div>
